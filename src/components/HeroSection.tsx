@@ -4,11 +4,18 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background - Placeholder for now */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 gradient-hero opacity-90 z-10" />
-        {/* Replace this div with actual video element when video is added */}
-        <div className="w-full h-full bg-gradient-to-br from-primary via-charcoal to-primary bg-[length:400%_400%] animate-gradient" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/videos/hero-fitness.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 gradient-hero opacity-70 z-10" />
       </div>
 
       {/* Content */}
