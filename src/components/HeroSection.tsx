@@ -41,8 +41,7 @@ const HeroSection = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-primary font-bold text-lg px-8 py-6 transition-bounce hover:scale-105"
+              className="bg-secondary text-primary hover:bg-secondary/90 font-bold text-lg px-8 py-6 shadow-glow transition-bounce hover:scale-105"
               asChild
             >
               <a
