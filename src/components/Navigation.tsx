@@ -34,12 +34,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center font-bold text-primary text-xl">
+            <div className="w-16 h-10 bg-secondary rounded-lg flex items-center justify-center font-bold text-primary text-xl">
               AFF
             </div>
-            <span className="text-primary-foreground font-bold text-xl hidden sm:block">
-              Aarif Functional Fitness
-            </span>
           </a>
 
           {/* Desktop Navigation */}
