@@ -1,4 +1,5 @@
 import { Award, Heart, Target } from "lucide-react";
+import aarifProfile from "@/assets/aarif-profile.jpg";
 
 const AboutSection = () => {
   const values = [
@@ -30,7 +31,7 @@ const AboutSection = () => {
           <div className="relative animate-fade-in">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-strong">
               <img
-                src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80"
+                src={aarifProfile}
                 alt="Aarif - Professional Fitness Coach"
                 className="w-full h-full object-cover"
               />
