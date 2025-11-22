@@ -1,7 +1,25 @@
 import { Award, Heart, Target } from "lucide-react";
 import aarifProfile from "@/assets/aarif-profile.jpg";
+import aarifGroup from "@/assets/aarif-group.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 const AboutSection = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+
+  const mediaItems = [
+    { type: "image", src: aarifProfile, alt: "Aarif - Professional Fitness Coach" },
+    { type: "image", src: aarifGroup, alt: "Aarif with Training Group" },
+    { type: "video", src: "/videos/aarif-training.mp4", alt: "Training Session" },
+  ];
+
   const values = [
     {
       icon: Target,
@@ -27,15 +45,40 @@ const AboutSection = () => {
     <section id="about" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image */}
+          {/* Image Carousel */}
           <div className="relative animate-fade-in">
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-strong">
-              <img
-                src={aarifProfile}
-                alt="Aarif - Professional Fitness Coach"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <Carousel
+              plugins={[plugin.current]}
+              className="w-full"
+              opts={{
+                loop: true,
+              }}
+            >
+              <CarouselContent>
+                {mediaItems.map((item, index) => (
+                  <CarouselItem key={index}>
+                    <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-strong">
+                      {item.type === "image" ? (
+                        <img
+                          src={item.src}
+                          alt={item.alt}
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <video
+                          src={item.src}
+                          className="w-full h-full object-cover"
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                        />
+                      )}
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
             <div className="absolute -bottom-6 -right-6 bg-secondary text-primary px-6 py-4 rounded-xl shadow-medium">
               <p className="font-bold text-2xl">10+</p>
               <p className="text-sm">Years Experience</p>

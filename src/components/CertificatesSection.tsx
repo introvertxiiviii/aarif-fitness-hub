@@ -73,8 +73,8 @@ const CertificatesSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-0 -translate-x-12" />
-            <CarouselNext className="right-0 translate-x-12" />
+            <CarouselPrevious className="left-0 md:-translate-x-12 translate-x-0" />
+            <CarouselNext className="right-0 md:translate-x-12 translate-x-0" />
           </Carousel>
         </div>
       </div>
