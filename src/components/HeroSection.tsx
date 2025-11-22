@@ -35,7 +35,7 @@ const HeroSection = () => {
               className="bg-secondary text-primary hover:bg-secondary/90 font-bold text-lg px-8 py-6 shadow-glow transition-bounce hover:scale-105"
               asChild
             >
-              <a href="#contact">
+              <a href="tel:+919716306747">
                 Book a Consultation <ArrowRight className="ml-2" size={20} />
               </a>
             </Button>
