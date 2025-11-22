@@ -55,7 +55,7 @@ const SocialSection = () => {
               asChild
             >
               <a
-                href="#"
+                href="https://www.instagram.com/aarif097/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
