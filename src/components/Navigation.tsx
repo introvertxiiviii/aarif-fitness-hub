@@ -16,11 +16,12 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#programs", label: "Programs" },
-    { href: "#knowledge", label: "Knowledge" },
-    { href: "#testimonials", label: "Testimonials" },
-    { href: "#contact", label: "Contact" },
+    { href: "/#about", label: "About" },
+    { href: "/services", label: "Services" },
+    { href: "/#programs", label: "Programs" },
+    { href: "/#knowledge", label: "Knowledge" },
+    { href: "/#testimonials", label: "Testimonials" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   return (
@@ -34,8 +35,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center space-x-2">
-            <img src={affLogo} alt="AFF Logo" className="h-12 w-auto" />
+          <a href="/" className="flex items-center space-x-2">
+            <img src={affLogo} alt="AFF Logo" className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
