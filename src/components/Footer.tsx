@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import affLogo from "@/assets/aff-logo.png";
 
 const Footer = () => {
   return (
@@ -8,10 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center font-bold text-primary text-xl">
-                AFF
-              </div>
-              <span className="font-bold text-xl">Aarif Functional Fitness</span>
+              <img src={affLogo} alt="AFF Logo" className="h-12 w-auto" />
             </div>
             <p className="text-primary-foreground/80 max-w-md leading-relaxed">
               Transforming lives through personalized functional fitness coaching.
@@ -26,7 +24,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="text-primary-foreground/80 hover:text-secondary transition-smooth"
                 >
                   About
@@ -34,7 +32,15 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#programs"
+                  href="/services"
+                  className="text-primary-foreground/80 hover:text-secondary transition-smooth"
+                >
+                  Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#programs"
                   className="text-primary-foreground/80 hover:text-secondary transition-smooth"
                 >
                   Programs
@@ -42,7 +48,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#knowledge"
+                  href="/#knowledge"
                   className="text-primary-foreground/80 hover:text-secondary transition-smooth"
                 >
                   Knowledge
@@ -50,7 +56,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#testimonials"
+                  href="/#testimonials"
                   className="text-primary-foreground/80 hover:text-secondary transition-smooth"
                 >
                   Testimonials
@@ -58,7 +64,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className="text-primary-foreground/80 hover:text-secondary transition-smooth"
                 >
                   Contact
@@ -80,7 +86,7 @@ const Footer = () => {
                 <Youtube size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/aarif097/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary-foreground/10 rounded-lg flex items-center justify-center hover:bg-secondary hover:text-primary transition-smooth"
