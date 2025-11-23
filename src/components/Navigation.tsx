@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import affLogo from "@/assets/aff-logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,9 +35,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center space-x-2">
-            <div className="w-16 h-10 bg-secondary rounded-lg flex items-center justify-center font-bold text-primary text-xl">
-              AFF
-            </div>
+            <img src={affLogo} alt="AFF Logo" className="h-12 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
