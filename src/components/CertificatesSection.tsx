@@ -9,6 +9,7 @@ import { Award } from "lucide-react";
 import certificate1 from "@/assets/certificate-1.jpeg";
 import certificate2 from "@/assets/certificate-2.jpeg";
 import certificate3 from "@/assets/certificate-3.jpeg";
+import certificate4 from "@/assets/certificate-4.jpeg";
 
 const CertificatesSection = () => {
   const certificates = [
@@ -26,6 +27,11 @@ const CertificatesSection = () => {
       image: certificate3,
       title: "Adult CPR Training",
       organization: "Emergency University",
+    },
+    {
+      image: certificate4,
+      title: "Yoga Volunteer",
+      organization: "Yoga Certification Board - Ministry of Ayush, Government of India",
     },
   ];
 
