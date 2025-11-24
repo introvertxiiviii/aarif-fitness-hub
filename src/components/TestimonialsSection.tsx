@@ -67,8 +67,11 @@ const TestimonialsSection = () => {
               <video
                 src="/videos/client-testimonial.mp4"
                 className="w-full h-full object-cover"
-                controls
+                autoPlay
+                muted
+                loop
                 playsInline
+                controls
               />
             </div>
           </div>
