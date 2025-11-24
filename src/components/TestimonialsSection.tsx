@@ -60,8 +60,64 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
+        <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+          {/* Video Testimonial - Left Side */}
+          <div className="animate-fade-in">
+            <div className="rounded-2xl overflow-hidden shadow-strong">
+              <video
+                src="/videos/client-testimonial.mp4"
+                className="w-full h-full object-cover"
+                controls
+                playsInline
+              />
+            </div>
+          </div>
+
+          {/* Written Testimonials - Right Side */}
+          <div className="space-y-6">
+            {testimonials.slice(0, 3).map((testimonial, index) => (
+              <Card
+                key={index}
+                className="hover:shadow-medium transition-smooth animate-scale-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-full object-cover shadow-soft"
+                    />
+                    <div>
+                      <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Age {testimonial.age}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="text-accent fill-accent"
+                        size={18}
+                      />
+                    ))}
+                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Additional Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+          {testimonials.slice(3).map((testimonial, index) => (
             <Card
               key={index}
               className="hover:shadow-medium transition-smooth animate-scale-in"

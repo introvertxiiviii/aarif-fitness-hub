@@ -15,8 +15,8 @@ const AboutSection = () => {
   );
 
   const mediaItems = [
-    { type: "image", src: aarifProfile, alt: "Aarif - Professional Fitness Coach" },
     { type: "image", src: aarifGroup, alt: "Aarif with Training Group" },
+    { type: "image", src: aarifProfile, alt: "Aarif - Professional Fitness Coach" },
     { type: "video", src: "/videos/aarif-training.mp4", alt: "Training Session" },
   ];
 
